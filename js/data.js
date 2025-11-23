@@ -1,5 +1,159 @@
 const promptsData = {
     areas: {
+        extrajudicial: {
+            nome: "Extrajudicial",
+            objetos: {
+                relatorio_procedimentos: {
+                    nome: "Relatório de Procedimentos Extrajudiciais",
+                    ias: {
+                        googleair: {
+                            prompt: `Com base na íntegra do procedimento extrajudicial em anexo (especificar: Notícia de Fato, Procedimento Administrativo, Inquérito Civil, etc.), realize uma análise técnico-jurídica nos seguintes moldes:
+
+1. Síntese Fática e Histórico Processual
+Apresente um resumo cronológico e objetivo dos fatos narrados, indicando:
+A origem da demanda (ex: representação, ofício, denúncia);
+Os envolvidos (partes, órgãos públicos, entidades privadas);
+As diligências realizadas até o momento.
+
+2. Análise Documental Completa dos Autos
+Identifique e descreva os documentos existentes nos autos, com ênfase em:
+Laudos médicos, receituários, atestados ou relatórios de saúde, destacando diagnóstico, CID, necessidade terapêutica, e prescrição médica (mencionar o(s) ID(s) ou fl(s).);
+Documentos administrativos (ofícios, respostas de órgãos, pareceres técnicos);
+Eventuais declarações, comprovantes ou documentos sociais que indiquem vulnerabilidade, urgência ou risco.
+
+3. Regularidade Formal
+Verifique se o procedimento está adequadamente instruído:
+Se houve instauração formal e motivada;
+Se os documentos estão organizados, numerados e acessíveis;
+Se há movimentação regular e cumprimento de prazos.
+
+4. Análise de Atribuição e Pertinência Temática
+Avalie se a matéria é de atribuição do Ministério Público, indicando o fundamento legal (ex: art. 129, II ou III, da CF; Lei nº 7.347/85; ECA; Lei 13.146/2015 – PCD, etc.);
+Se pertinente, indique eventual necessidade de declínio de atribuição para outra Promotoria especializada.
+
+5. Análise Jurídica de Mérito
+Apresente a qualificação jurídica dos fatos apurados;
+Identifique direitos violados ou ameaçados (direito à saúde, assistência social, educação, etc.);
+Fundamente com base na legislação aplicável e, se possível, traga jurisprudência ou orientações do CNMP ou PGJ.
+
+6. Providências Ministeriais Recomendadas
+Com base na análise dos documentos e do mérito, indique objetivamente a medida cabível:
+Solicitação de novos documentos (ex: exames complementares, avaliação do SUS, parecer de junta médica);
+Expedição de recomendação administrativa;
+Propositura de ação civil pública, ação de obrigação de fazer, medida protetiva etc.;
+Declínio de atribuição;
+Promoção de arquivamento fundamentado.
+
+7. Minuta Propositiva (se aplicável)
+Caso possível, redigir minuta da medida proposta, como despacho, recomendação, petição inicial ou promoção de arquivamento.
+
+8. Observações Complementares
+Informe se há litispendência, duplicidade de procedimentos ou arquivamentos anteriores sobre o mesmo fato;
+
+9. Considere as Resoluções do CSMP e do CNMP e do MPPE que versam sobre notícia de fato, procedimento preparatório, procedimentos administrativos - e suas subdivisões -, inquérito civil, procedimento investigatório criminal. Em resumo, as resoluções que tratam dos procedimentos extrajudiciais.
+Registre eventual risco à integridade física ou agravamento de quadro clínico, especialmente nos casos envolvendo saúde, deficiência, idosos ou crianças/adolescentes.`,
+                            video: "dQw4w9WgXcQ"
+                        },
+                        chatgpt: {
+                            prompt: `Com base na íntegra do procedimento extrajudicial em anexo (especificar: Notícia de Fato, Procedimento Administrativo, Inquérito Civil, etc.), realize uma análise técnico-jurídica nos seguintes moldes:
+
+1. Síntese Fática e Histórico Processual
+Apresente um resumo cronológico e objetivo dos fatos narrados, indicando:
+A origem da demanda (ex: representação, ofício, denúncia);
+Os envolvidos (partes, órgãos públicos, entidades privadas);
+As diligências realizadas até o momento.
+
+2. Análise Documental Completa dos Autos
+Identifique e descreva os documentos existentes nos autos, com ênfase em:
+Laudos médicos, receituários, atestados ou relatórios de saúde, destacando diagnóstico, CID, necessidade terapêutica, e prescrição médica (mencionar o(s) ID(s) ou fl(s).);
+Documentos administrativos (ofícios, respostas de órgãos, pareceres técnicos);
+Eventuais declarações, comprovantes ou documentos sociais que indiquem vulnerabilidade, urgência ou risco.
+
+3. Regularidade Formal
+Verifique se o procedimento está adequadamente instruído:
+Se houve instauração formal e motivada;
+Se os documentos estão organizados, numerados e acessíveis;
+Se há movimentação regular e cumprimento de prazos.
+
+4. Análise de Atribuição e Pertinência Temática
+Avalie se a matéria é de atribuição do Ministério Público, indicando o fundamento legal (ex: art. 129, II ou III, da CF; Lei nº 7.347/85; ECA; Lei 13.146/2015 – PCD, etc.);
+Se pertinente, indique eventual necessidade de declínio de atribuição para outra Promotoria especializada.
+
+5. Análise Jurídica de Mérito
+Apresente a qualificação jurídica dos fatos apurados;
+Identifique direitos violados ou ameaçados (direito à saúde, assistência social, educação, etc.);
+Fundamente com base na legislação aplicável e, se possível, traga jurisprudência ou orientações do CNMP ou PGJ.
+
+6. Providências Ministeriais Recomendadas
+Com base na análise dos documentos e do mérito, indique objetivamente a medida cabível:
+Solicitação de novos documentos (ex: exames complementares, avaliação do SUS, parecer de junta médica);
+Expedição de recomendação administrativa;
+Propositura de ação civil pública, ação de obrigação de fazer, medida protetiva etc.;
+Declínio de atribuição;
+Promoção de arquivamento fundamentado.
+
+7. Minuta Propositiva (se aplicável)
+Caso possível, redigir minuta da medida proposta, como despacho, recomendação, petição inicial ou promoção de arquivamento.
+
+8. Observações Complementares
+Informe se há litispendência, duplicidade de procedimentos ou arquivamentos anteriores sobre o mesmo fato;
+
+9. Considere as Resoluções do CSMP e do CNMP e do MPPE que versam sobre notícia de fato, procedimento preparatório, procedimentos administrativos - e suas subdivisões -, inquérito civil, procedimento investigatório criminal. Em resumo, as resoluções que tratam dos procedimentos extrajudiciais.
+Registre eventual risco à integridade física ou agravamento de quadro clínico, especialmente nos casos envolvendo saúde, deficiência, idosos ou crianças/adolescentes.`,
+                            video: "dQw4w9WgXcQ"
+                        },
+                        claude: {
+                            prompt: `Com base na íntegra do procedimento extrajudicial em anexo (especificar: Notícia de Fato, Procedimento Administrativo, Inquérito Civil, etc.), realize uma análise técnico-jurídica nos seguintes moldes:
+
+1. Síntese Fática e Histórico Processual
+Apresente um resumo cronológico e objetivo dos fatos narrados, indicando:
+A origem da demanda (ex: representação, ofício, denúncia);
+Os envolvidos (partes, órgãos públicos, entidades privadas);
+As diligências realizadas até o momento.
+
+2. Análise Documental Completa dos Autos
+Identifique e descreva os documentos existentes nos autos, com ênfase em:
+Laudos médicos, receituários, atestados ou relatórios de saúde, destacando diagnóstico, CID, necessidade terapêutica, e prescrição médica (mencionar o(s) ID(s) ou fl(s).);
+Documentos administrativos (ofícios, respostas de órgãos, pareceres técnicos);
+Eventuais declarações, comprovantes ou documentos sociais que indiquem vulnerabilidade, urgência ou risco.
+
+3. Regularidade Formal
+Verifique se o procedimento está adequadamente instruído:
+Se houve instauração formal e motivada;
+Se os documentos estão organizados, numerados e acessíveis;
+Se há movimentação regular e cumprimento de prazos.
+
+4. Análise de Atribuição e Pertinência Temática
+Avalie se a matéria é de atribuição do Ministério Público, indicando o fundamento legal (ex: art. 129, II ou III, da CF; Lei nº 7.347/85; ECA; Lei 13.146/2015 – PCD, etc.);
+Se pertinente, indique eventual necessidade de declínio de atribuição para outra Promotoria especializada.
+
+5. Análise Jurídica de Mérito
+Apresente a qualificação jurídica dos fatos apurados;
+Identifique direitos violados ou ameaçados (direito à saúde, assistência social, educação, etc.);
+Fundamente com base na legislação aplicável e, se possível, traga jurisprudência ou orientações do CNMP ou PGJ.
+
+6. Providências Ministeriais Recomendadas
+Com base na análise dos documentos e do mérito, indique objetivamente a medida cabível:
+Solicitação de novos documentos (ex: exames complementares, avaliação do SUS, parecer de junta médica);
+Expedição de recomendação administrativa;
+Propositura de ação civil pública, ação de obrigação de fazer, medida protetiva etc.;
+Declínio de atribuição;
+Promoção de arquivamento fundamentado.
+
+7. Minuta Propositiva (se aplicável)
+Caso possível, redigir minuta da medida proposta, como despacho, recomendação, petição inicial ou promoção de arquivamento.
+
+8. Observações Complementares
+Informe se há litispendência, duplicidade de procedimentos ou arquivamentos anteriores sobre o mesmo fato;
+
+9. Considere as Resoluções do CSMP e do CNMP e do MPPE que versam sobre notícia de fato, procedimento preparatório, procedimentos administrativos - e suas subdivisões -, inquérito civil, procedimento investigatório criminal. Em resumo, as resoluções que tratam dos procedimentos extrajudiciais.
+Registre eventual risco à integridade física ou agravamento de quadro clínico, especialmente nos casos envolvendo saúde, deficiência, idosos ou crianças/adolescentes.`,
+                            video: "dQw4w9WgXcQ"
+                        }
+                    }
+                },
+            }
+        },    
         civil: {
             nome: "Cível",
             objetos: {
